@@ -1,0 +1,41 @@
+.quest-cont{
+    height: 100%;
+    width: 90%;
+    /* background-color: floralwhite; */
+    display: flex;
+    flex-direction: column;
+    /* border-right: 1px solid lightslategray ; */
+}
+
+.quest-title{
+    font-size: x-large;
+    color: darkred;
+    text-align: center;
+}
+
+.questanaire-form{
+    display: flex;
+    flex-direction: column;
+}
+.questanaire-form>input{
+    width: 30%;
+}
+
+.submit-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-btn>button{
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 0px;
+    background-color: rgb(152, 203, 255);
+    width: 15%;
+}
+
+.submit-btn>:hover{
+    background-color: dodgerblue;
+    cursor: pointer;
+}

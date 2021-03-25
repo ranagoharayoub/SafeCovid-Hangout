@@ -1,0 +1,112 @@
+.join-cont{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: forestgreen; */
+    display: flex;
+    flex-direction: column;
+}
+
+.join-upper{
+        height: 10%;
+        width: 100%;
+        /* background-color: mediumaquamarine; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid lightslategray;
+    }
+    
+.join-title{
+        font-size: x-large;
+        text-align: center;
+        font-weight: 500;
+}
+
+.back-btn{
+    margin-right: 20px !important;
+}
+
+.join-lower{
+    height: 100%;
+    width: 100%;
+    /* background-color: fuchsia; */
+    display: flex;
+    justify-content: center;
+}
+
+.join-left-cont{
+    height: 90%;
+    width: 45%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    /* justify-content: space-around; */
+}
+
+.group{
+    height: 30%;
+    width: 60%;
+    /* background-color: lightgreen; */
+    display: flex;
+    
+}
+
+.group-pic{
+    height: 100%;
+    width: 60%;
+    /* background-color: lightsalmon; */
+}
+
+.group-pic>img{
+    height: 100%;
+    width: 100%;
+    /* background-color: lightseagreen; */
+    border: 1px solid lightslategray;
+}
+
+.join-org-btn{
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    margin-left: 10px;
+    
+}
+
+.join-btn{
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.join-org-btn>button{
+    padding-top:5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: lightskyblue;
+}
+
+.join-org-btn>button:hover{
+    background-color: dodgerblue;
+}
+
+
+.event{
+    height: 10%;
+    width: 60%;
+    /* background-color: lightskyblue; */
+    margin-bottom: 5%;
+}
+
+.join-right-cont{
+    height: 90%;
+    width: 45%;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+

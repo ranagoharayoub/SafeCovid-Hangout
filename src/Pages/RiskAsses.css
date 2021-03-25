@@ -1,0 +1,71 @@
+.risk-cont{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: lightskyblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.risk-upper{
+    height: 10%;
+    width: 100%;
+    /* background-color: mediumaquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.risk-title{
+    font-size: x-large;
+    text-align: center;
+    font-weight: 500;
+    margin-right: 40px;
+}
+
+.back-btn{
+    margin-left: 20px;
+    padding: 5px 20px;
+    border: none;
+    /* border: 1px solid dodgerblue; */
+    border-radius: 5px;
+    /* background-color: rgb(204, 226, 248); */
+    background-color: dodgerblue;
+}
+
+.risk-upper>button:hover{
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+
+.risk-lower{
+    flex: 1;
+    /* background-color: darkgoldenrod; */
+    display: flex;
+    
+}
+
+.risk-left-cont{
+    height: 100%;
+    width: 20%;
+    /* background-color: lightslategray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.risk-center-cont{
+    flex: 1;
+    /* background-color: limegreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.risk-right-cont{
+    width: 40%;
+    /* background-color: maroon; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

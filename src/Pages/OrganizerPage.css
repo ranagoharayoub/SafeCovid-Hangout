@@ -1,0 +1,66 @@
+.profile-cont{
+    height: 90vh;
+    width: 100%;
+    /* background-color: fuchsia; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.profile-center{
+    height: 80%;
+    width: 80%;
+    /* background-color: goldenrod; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile-display{
+    height: 70%;
+    width: 25%;
+    border: 1px solid lightslategray;
+    /* background-color: gray; */
+    display: flex;
+    flex-direction: column;
+}
+
+.user-pic{
+    height: 70%;
+    width: 100%;
+    /* background-color: greenyellow; */
+    display: flex;
+    justify-content: center;
+}
+
+.user-pic{
+    /* height: 100%; */
+    width: 100%;
+}
+
+.user-name{
+    height: 15%;
+    width: 100%;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-name>p{
+    margin: 0%;
+}
+
+.user-rank{
+    height: 15%;
+    width: 100%;
+    /* background-color: lime; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-rank>p{
+    margin: 0%;
+}
