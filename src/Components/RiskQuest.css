@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
 }
-.questanaire-form>input{
+.questanaire-form>select{
     width: 30%;
 }
 

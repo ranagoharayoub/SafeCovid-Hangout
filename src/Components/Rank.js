@@ -1,14 +1,14 @@
 import React from 'react'
 import './Rank.css'
 
-function Rank() {
+function Rank({rank}) {
     return (
         <div className='rank-cont'>
             <div className='rank-title'>
                 <p>Rank Assigned</p>
             </div>
             <div className='rank-risk'>
-                <p>Your Risk Rank "A"</p>
+                <p>Your Risk Rank <b>{`"${rank}"`}</b></p>
                 <p>Acceptable Activities Below (all applicable categories listed)</p>
             </div>
             <div className='activity-cont'>

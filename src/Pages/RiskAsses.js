@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Rank from '../Components/Rank'
 import RiskQuest from '../Components/RiskQuest'
 import SignUp from '../Components/SignUp'
@@ -6,6 +6,23 @@ import './RiskAsses.css'
 import { Link } from 'react-router-dom'
 
 function RiskAsses() {
+
+    const [riskRank, setriskRank] = useState('Not Assigned')
+    
+    const rankA = () => {
+        setriskRank('A')
+    }
+    const rankB = () => {
+        setriskRank('B')
+    } 
+    const rankC = () => {
+        setriskRank('C')
+    } 
+    const rankD = () => {
+        setriskRank('D')
+    }
+
+    console.log(riskRank)
     return (
         <div className='risk-cont'>
             <div className='risk-upper'>
@@ -18,10 +35,10 @@ function RiskAsses() {
                     <SignUp></SignUp>
                 </div>
                 <div className= 'risk-center-cont'>
-                    <RiskQuest></RiskQuest>
+                    <RiskQuest rankPropA={rankA} rankPropB={rankB} rankPropC={rankC} rankPropD={rankD} ></RiskQuest>
                 </div>
                 <div className= 'risk-right-cont'>
-                    <Rank></Rank>
+                    <Rank rank = {riskRank}></Rank>
                 </div>
             </div>
         </div>
