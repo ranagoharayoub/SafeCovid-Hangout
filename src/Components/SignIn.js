@@ -12,7 +12,7 @@ function SignIn() {
                 <input></input>
                 <label style={{color: 'dodgerblue'}}>Password</label>
                 <input ></input>
-                <button>Sing in</button>
+                <button>Sign In</button>
             </form>
         </div>
     )

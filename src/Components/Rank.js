@@ -9,7 +9,7 @@ function Rank() {
             </div>
             <div className='rank-risk'>
                 <p>Your Risk Rank "A"</p>
-                <p>Acceptable Activities Below (all aplicable categories listed)</p>
+                <p>Acceptable Activities Below (all applicable categories listed)</p>
             </div>
             <div className='activity-cont'>
                 <div className='allowed-activity'>
@@ -19,7 +19,7 @@ function Rank() {
                                 <img src='/hikinh.png' alt='activity'></img>
                             </div>
                             <div className='rank-pic-title'>
-                                <p>Hikng/Walk <br></br>suitable for rank A-D</p>
+                                <p>Hiking/Walking <br></br>suitable for rank A-D</p>
                             </div>
                         </div>
                         <div className='pic-double'>
@@ -45,7 +45,7 @@ function Rank() {
                                 <img src='/indoor.png' alt='activity'></img>
                             </div>
                             <div className='rank-pic-title'>
-                                <p>Indoor Dinning/Movie <br></br> Suitable for rank A</p>
+                                <p>Indoor Dining/Movie <br></br> Suitable for rank A</p>
                             </div>
                         </div>    
                     </div>

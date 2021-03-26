@@ -10,7 +10,7 @@ function RiskAsses() {
         <div className='risk-cont'>
             <div className='risk-upper'>
                     <Link  to='/' ><button className='back-btn'>Back</button></Link>
-                    <p className='risk-title'>Complet Your Risk Assessment Profile</p>
+                    <p className='risk-title'>Complete Your Risk Assessment Profile</p>
                     <div></div>
             </div>
             <div className='risk-lower'>

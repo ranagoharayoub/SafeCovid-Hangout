@@ -9,15 +9,15 @@ function RiskQuest() {
             </div>
             <div className='questionaire'>
                 <p>Risk Assessment</p>
-                <p>Please answer actually risk preference assuming all other group participants are "low risk"</p>
+                <p>Please answer assuming all other group participants are "low risk"</p>
                 <form className='questanaire-form'>
                     <label>Are you comfortable attending an open outdoor activity (hiking, walk, picnic) ? (Y/N) </label>
                     <input></input>
-                    <label>Are you comfortable attending a confined outdoor outdoor activity (outdoor activity) ? (Y/N) </label>
+                    <label>Are you comfortable attending a confined outdoor activity (dining outdoors) ? (Y/N) </label>
                     <input></input>
                     <label>Are you comfortable attending an indoor private activity (game night, home dinner) ? (Y/N) </label>
                     <input></input>
-                    <label>Are you comfortable attending an indoor public activity (game night, home dinner) ? (Y/N) </label>
+                    <label>Are you comfortable attending an indoor public activity (game night, movie theater)? (Y/N) </label>
                     <input></input>
                     <div className='submit-btn'>
                         <button>Submit</button>

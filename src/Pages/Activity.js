@@ -18,7 +18,7 @@ function Activity() {
                     </div>
                 </div>
                 <div className='join-activity-btn'>
-                    <button>Hiking/Wale: Suitable for rank A-D</button>
+                    <button>Hiking/Walking: Suitable for rank A-D</button>
                 </div>
                 <div className='group'>
                     <div className='group-pic' >
