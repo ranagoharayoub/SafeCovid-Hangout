@@ -1,40 +1,48 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './RiskQuest.css'
-
-function RiskQuest({rankPropA, rankPropB,rankPropC,rankPropD,}) {
+import {useStateValue} from '../Context/AuthContext'
+import {User_Rank} from '../Context/Reducer'
+function RiskQuest() {
 
     const [hiking, sethiking] = useState('Yes')
     const [diningOutdoor, setdiningOutdoor] = useState('Yes')
     const [homeDinner, sethomeDinner] = useState('Yes')
     const [movie, setmovie] = useState('Yes')
-    const [rank, setrank] = useState('N/A')
-
+    const [rank, setrank] = useState('Not Assigned')
+    const [{}, dispatch] = useStateValue()
+   
     const profileRank = (e) =>{
             console.log(hiking)
             console.log(diningOutdoor)
             console.log(homeDinner)
             console.log(movie)
-            e.preventDefault()
+           
 
             if (hiking==='Yes'&& diningOutdoor==='Yes'&& homeDinner==='Yes'&& movie==='Yes') {
                 setrank('A')
-                rankPropA()
+                
             }
             if (hiking==='Yes'&& diningOutdoor==='Yes'&& homeDinner==='Yes'&& movie==='No') {
                 setrank('B')
-                rankPropB()
+                
             }
             if (hiking==='Yes'&& diningOutdoor==='Yes'&& homeDinner==='No'&& movie==='No') {
                 setrank('C')
-                rankPropC()
+               
             }
             if (hiking==='Yes'&& diningOutdoor==='No'&& homeDinner==='No'&& movie==='No') {
                 setrank('D')
-                rankPropD()
+                
             }
-
+            
+            e.preventDefault()
     }
-    console.log(rank)
+    useEffect(() => {
+        dispatch({
+            type: User_Rank,
+            payload: rank,
+        })
+    }, [dispatch,rank])
     return (
         <div className='quest-cont'>
             <div className='quest-title'>
@@ -59,7 +67,7 @@ function RiskQuest({rankPropA, rankPropB,rankPropC,rankPropD,}) {
                         <option>Yes</option>
                         <option>No</option>
                     </select>
-                    <label>Are you comfortable attending an indoor public activity (game night, movie theater)? (Y/N) </label>
+                    <label>Are you comfortable attending an indoor public activity (indoor dining, movie theater)? (Y/N) </label>
                     <select value={movie} onChange={(e)=>setmovie(e.target.value)}>
                         <option>Yes</option>
                         <option>No</option>

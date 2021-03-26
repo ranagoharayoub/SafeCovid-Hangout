@@ -1,7 +1,9 @@
 import React from 'react'
 import './Rank.css'
+import {useStateValue} from '../Context/AuthContext'
 
-function Rank({rank}) {
+function Rank() {
+    const [{rank}, dispatch] = useStateValue()
     return (
         <div className='rank-cont'>
             <div className='rank-title'>

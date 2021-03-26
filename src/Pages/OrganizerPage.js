@@ -49,6 +49,9 @@ function OrganizerPage() {
                         </div>
                     </div>
                 </div>
+                <div>
+                    <button className='del-btn'>Delete Group</button>
+                </div>
             </div>
     </div>
     )
