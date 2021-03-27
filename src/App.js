@@ -2,6 +2,7 @@ import './App.css';
 import HomePage from './Pages/HomePage';
 import RiskAsses from './Pages/RiskAsses';
 import JoinGroup from './Pages/JoinGroup';
+import SignUp from './Components/SignUp';
 import OrganizerPage from './Pages/OrganizerPage';
 import Activity from './Pages/Activity';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
@@ -13,6 +14,7 @@ function App() {
         <Switch>
         <Route path='/' exact component ={HomePage}></Route>
         <Route path ='/risk' component={RiskAsses}></Route>
+        <Route path ='/signup' component={SignUp}></Route>
         <Route path ='/group' component={JoinGroup}></Route>
         <Route path = '/organize' component={OrganizerPage}></Route>
         <Route path = '/activity' component={Activity}></Route>
