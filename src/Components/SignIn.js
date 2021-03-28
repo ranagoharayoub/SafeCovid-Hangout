@@ -27,6 +27,7 @@ function SignIn() {
 			const customerDataUrl = 'http://localhost:3090/user/';
 
 			ApiClient.sendPostAuthentication(apiUrl, credentials, (res) => {
+				// console.log("asdsad")
 				if (res.data) {
 					console.log(res, "Response")
 					data = { ...data, userId: res.data.userId }
