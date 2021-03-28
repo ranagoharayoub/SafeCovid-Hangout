@@ -4,6 +4,7 @@
     /* background-color: forestgreen; */
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .join-upper{
@@ -28,10 +29,11 @@
 
 .join-lower{
     height: 100%;
-    width: 100%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     /* background-color: fuchsia; */
-    display: flex;
-    justify-content: center;
 }
 
 .join-left-cont{

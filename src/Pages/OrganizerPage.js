@@ -60,13 +60,13 @@ function OrganizerPage(props) {
                             return (
                                 <div className='profile-display'>
                                     <div className='user-pic'>
-                                        <img src='profile-pic.jpg' alt='img'></img>
+                                        <img src='/profile-pic.jpg' alt='img'></img>
                                     </div>
                                     <div className='user-name'>
                                         <p>{user.username}</p>
                                     </div>
                                     <div className='user-rank'>
-                                        <p>Profile Rank-(A,B,C,D) : {user.rank}</p>
+                                        <p>Profile Rank: {user.rank}</p>
                                         <p>Email Address: {user.email}</p>
                                     </div>
                                 </div>

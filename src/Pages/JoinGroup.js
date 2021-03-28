@@ -91,7 +91,7 @@ function JoinGroup() {
                                             <div className='group-pic'>
                                                 <img src='/Event.png' alt='img'></img>
                                             </div>
-                                            <div className='join-org-btn' style={{display: 'grid', gridTemplateColumns: '1fr 1fr', marginTop: '20px'}}>
+                                            <div className='join-org-btn' >
                                                 {
                                                     // console.log(value.userId, group.users , group.users.includes(value.userId) , '...Checking')
                                                     group.users.includes(value.userId) ?
