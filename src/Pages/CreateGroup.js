@@ -5,6 +5,8 @@ import ApiClient from '../CommonMethods/APIHandle';
 
 
 import { useHistory } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import './CreateGroup.css'
 
 function CreateGroup() {
     const { value, setValue } = useContext(ConfidentialContext);
@@ -41,16 +43,17 @@ function CreateGroup() {
             <div className='join-upper' style={{ display: 'flex', justifyContent: 'center' }}>
                 <p className='join-title' style={{ textAlign: 'center' }} >All Created Groups</p>
             </div>
-            <div className='grid' style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+            <div className='grid' style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', marginTop: '20px' }}>
                 {groups ? groups.map((group) => (
-                    <div onClick={() => showGroupDetail(group._id)} className='join-right-cont' >
-                        <div className='group'>
-                            <div className='group-pic' >
+                    <div className='all-group-cont' onClick={() => showGroupDetail(group._id)} >
+                        <div className='all-group'>
+                            <div className='all-group-pic' >
                                 <img src='/Event.png' alt='img'></img>
                             </div>
                             <div className='join-org-btn'>
-                                <button className='join-btn'>Join</button>
-                                <button className='org-login'>Organizer Login</button>
+                                <Link className='link-organizer' to='/organize'>
+                                    <button className='organizer-login'>Organizer Login</button>
+                                </Link>
                             </div>
                         </div>
                         <div className='event'>
