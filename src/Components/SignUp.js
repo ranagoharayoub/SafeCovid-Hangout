@@ -1,21 +1,29 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState} from 'react';
+import { useHistory } from "react-router-dom";
 import './SignUp.css'
 
-function SignUp() {
+function SignUp(props) {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
+	const [signupError, setSignupError] = useState('');
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
 	const [nameError, setNameError] = useState(false);
 	const [emailError, setEmailError] = useState(false);
 	const [usernameError, setUsernameError] = useState(false);
 	const [passwordError, setPasswordError] = useState(false);
+	let  history = useHistory();
 
 	const checkSignUp = (e) => {
 		e.preventDefault();		
 
 		if(name !== '' && email !== '' && password !== '' && username !== ''){
-			setNameError(false);   setEmailError(false);  setUsernameError(false);     setPasswordError(false);
+			setNameError(false);   setEmailError(false);  setUsernameError(false);     setPasswordError(false);  setSignupError('Please submit check form') 
+
+			// Sign Up API
+			const credentials = {name: name, username: username, email: email, password: password}
+			props.credential(credentials)
+
 		} 
 		if(!name){
 			 setNameError(true)
@@ -75,7 +83,7 @@ function SignUp() {
                     
 					<label>Password</label>
                     <input placeholder={'Please write password'}
-						type={'text'}
+						type={'password'}
 						style={passwordError ? {borderColor:'red'} : {borderColor: 'black'} }
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
@@ -83,6 +91,12 @@ function SignUp() {
                     
 					<button onClick={(e)=>checkSignUp(e)} >SignUp</button>
                 </form>
+
+				{signupError &&
+				<div>
+					{signupError}
+				</div>
+				}
             </div>
         </div>
     )

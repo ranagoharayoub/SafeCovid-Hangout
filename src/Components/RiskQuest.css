@@ -13,6 +13,10 @@
     text-align: center;
 }
 
+.quest-cont .rankText{
+    font-weight: bold;
+}
+
 .questanaire-form{
     display: flex;
     flex-direction: column;

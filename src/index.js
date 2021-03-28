@@ -8,9 +8,9 @@ import { AuthProvider } from './Context/AuthContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AuthProvider initialState={initialState} reducer={reducer} >
+    {/* <AuthProvider initialState={initialState} reducer={reducer} > */}
     <App />
-    </AuthProvider>
+    {/* </AuthProvider> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
