@@ -1,13 +1,13 @@
 import React, {useContext} from 'react'
 import './Rank.css'
-
+// import {useStateValue} from '../Context/AuthContext'
 
 import {ConfidentialContext} from '../Context/Context';
 
 function Rank() {
     
     const {value, setValue} = useContext(ConfidentialContext);
-    console.log(setValue)
+    // const [{rank}, dispatch] = useStateValue()
     return (
         <div className='rank-cont'>
             <div className='rank-title'>

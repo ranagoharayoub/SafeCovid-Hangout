@@ -12,8 +12,10 @@ function JoinGroup() {
 
     const {value, setValue} = useContext(ConfidentialContext);
     const [groups, setGroups] = useState(null)
-    console.log(setValue)
-    
+
+    useEffect(()=>{
+        getGroups()
+    }, [])
 
     const getGroups = () => {
         const apiUrl = 'http://localhost:3090/group/getGroups/';
@@ -30,10 +32,6 @@ function JoinGroup() {
             }	 
         })
     }
-    
-    useEffect(()=>{
-        getGroups()
-    })
 
     const joinGroup = (group_id) => {
         // console.log(group_id)

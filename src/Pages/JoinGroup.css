@@ -37,7 +37,7 @@
 .join-left-cont{
     height: 90%;
     width: 45%;
-    /* background-color: salmon; */
+    background-color: salmon;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,8 +46,9 @@
 }
 
 .group{
+    margin-top: 2%;
     height: 30%;
-    width: 60%;
+    width: 90%;
     /* background-color: lightgreen; */
     display: flex;
     
@@ -55,7 +56,7 @@
 
 .group-pic{
     height: 100%;
-    width: 60%;
+    width: 65%;
     /* background-color: lightsalmon; */
 }
 

@@ -2,12 +2,12 @@ import React,{useEffect, useContext, useState} from 'react';
 import './JoinGroup.css';
 import {ConfidentialContext} from '../Context/Context';
 import ApiClient from '../CommonMethods/APIHandle';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function CreateGroup() {
     const {value, setValue} = useContext(ConfidentialContext);
     const [groups, setGroups] = useState(null);
-    console.log(setValue)
+
     console.log(value, '..value')
 
     useEffect(()=>{
@@ -23,7 +23,7 @@ function CreateGroup() {
                 console.log(res)
             }	
         })  
-    },[value])
+    },[])
 
     useEffect(()=> {
         console.log(groups, 'groups')
@@ -31,12 +31,12 @@ function CreateGroup() {
 
     return (
         <div className='join-cont'>
-            <div className='join-upper'>
-                    <p className='join-title'>All Created Groups</p>                
+            <div className='join-upper' style={{display: 'flex', justifyContent:'center'}}>
+                    <p className='join-title' style={{textAlign:'center'}} >All Created Groups</p>                
             </div>
-            <div className='join-lower'>
+            <div className='grid' style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
                 {groups ? groups.map((user)=>(
-                    <div className='join-right-cont'>
+                    <div className='join-right-cont' >
                     <div className='group'>
                         <div className='group-pic' >
                             <img src='/Event.png' alt='img'></img>

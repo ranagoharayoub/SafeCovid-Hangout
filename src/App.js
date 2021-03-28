@@ -10,6 +10,7 @@ import OrganizerPage from './Pages/OrganizerPage';
 import Activity from './Pages/Activity';
 import {ConfidentialContext} from './Context/Context';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import NewGroup from './Pages/NewGroup';
 
 function App() {
   const [value, setValue] = useState({userId: null, token: null, userRank: null, rank: 'Not Assigned'});
@@ -24,9 +25,10 @@ function App() {
         <Route path ='/risk' component={RiskAsses}></Route>
         <Route path ='/group' component={JoinGroup}></Route>
         <Route path ='/created-groups' component={CreateGroup}></Route>
-        <Route path ='/create-group'>
+        {/* <Route path ='/create-group'>
           <RiskQuest forCreateGroup />
-        </Route>
+        </Route> */}
+        <Route path='/create-group' component={NewGroup}></Route>
         <Route path = '/organize' component={OrganizerPage}></Route>
         <Route path = '/activity' component={Activity}></Route>
         </Switch>

@@ -31,12 +31,8 @@ function SignIn() {
 					setValue({...value, userId: res.data.userId, token: res.data.token})	
 					ApiClient.sendGetAuthentication(customerDataUrl, res.data.userId,(res)=>{
 						if(res){
-							const token = value.token
-							const userId = value.userId
-							console.log(`userId-${userId}`)
-							console.log(`token-${token}`)
 							console.log('Data of specific user', res)
-							// setValue({...value, userRank: res.data.rank, token: token, userId: userId})
+							// setValue({...value, userRank: res.data.rank})
 							history.push('/group')
 						}
 						else{

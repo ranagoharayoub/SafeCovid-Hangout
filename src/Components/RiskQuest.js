@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
 import './RiskQuest.css';
+import {useStateValue} from '../Context/AuthContext';
 import ApiClient from '../CommonMethods/APIHandle';
-// import {User_Rank} from '../Context/Reducer';
+import {User_Rank} from '../Context/Reducer';
 import {ConfidentialContext} from '../Context/Context';
 import { useHistory } from "react-router-dom";
 function RiskQuest(props) {
@@ -11,6 +12,7 @@ function RiskQuest(props) {
     const [homeDinner, sethomeDinner] = useState('Yes')
     const [movie, setmovie] = useState('Yes')
     const [rank, setrank] = useState('Not Assigned')
+    // const [{}, dispatch] = useStateValue()
     const {value, setValue} = useContext(ConfidentialContext);
     let  history = useHistory()
    
@@ -37,43 +39,46 @@ function RiskQuest(props) {
                     }) 
                 }
             }
-            else if(props.forCreateGroup){
+            // else if(props.forCreateGroup){
     
-                if(rank !== 'Not Assigned'){
-                const apiUrl = 'http://localhost:3090/group/';
-                const checking = {  check1: false,
-                                    check2: false,
-                                    check3: false,
-                                    check4: false
-                                }
-                const  userId = value.userId;               
-                const  creation = { rank, 
-                                    checks: checking,
-                                    userId: userId   
-                                    } 
-                    console.log('CREATION =====>', creation)                
-                    ApiClient.sendPostAuthentication(apiUrl, creation, (res)=>{
-                        if(res){
-                            console.log('Create-Groups', res)
-                            history.push('/created-groups')
-                        }
-                        else{
-                            console.log(res)
-                        }	
-                    }) 
-                }
-            }
-
-            
-
+            //     if(rank !== 'Not Assigned'){
+            //     const apiUrl = 'http://localhost:3090/group/';
+            //     const checking = {  check1: false,
+            //                         check2: false,
+            //                         check3: false,
+            //                         check4: false
+            //                     }
+            //     const  userId = value.userId;               
+            //     const  creation = { rank, 
+            //                         checks: checking,
+            //                         userId: userId   
+            //                         } 
+            //         console.log('CREATION =====>', creation)                
+            //         ApiClient.sendPostAuthentication(apiUrl, creation, (res)=>{
+            //             if(res){
+            //                 console.log('Create-Groups', res)
+            //                 history.push('/created-groups')
+            //             }
+            //             else{
+            //                 console.log(res)
+            //             }	
+            //         }) 
+            //     }
+            // }
             e.preventDefault()
     }
 
+    // useEffect(() => {
+    //     dispatch({
+    //         type: User_Rank,
+    //         payload: rank,
+    //     })
+    // }, [rank])
 
     useEffect(() => {
         setValue({...value, rank: rank})
         console.log('USER VALUE', value)
-    }, [value,rank,setValue])
+    }, [rank])
 
     useEffect(() => {
         if (hiking==='Yes'&& diningOutdoor==='Yes'&& homeDinner==='Yes'&& movie==='Yes') {
@@ -99,12 +104,12 @@ function RiskQuest(props) {
                 <p>Take Risk Questionaire</p>
             </div>
 
-            {props.forCreateGroup && 
+            {/* {props.forCreateGroup && 
             <div >
               <span>Rank: </span>  
               <span className="rankText">"{rank}"</span>
             </div>
-            }
+            } */}
 
             <div className='questionaire'>
                 <p>Risk Assessment</p>

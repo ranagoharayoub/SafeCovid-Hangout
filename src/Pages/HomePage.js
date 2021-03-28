@@ -26,7 +26,7 @@ function HomePage() {
             </div>
             <div className='lower-cont'>
                 <div className='lower-title'>
-                    <p> Setup Covid-Safe Hangout with Classmates</p>
+                    <p>Making Covid-Safe Scheduling a Breeze</p>
                 </div>
                 <div className='lower-img'>
                     <div className='img-title'>
