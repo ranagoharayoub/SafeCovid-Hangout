@@ -7,6 +7,17 @@
     align-items: center;
 }
 
+.error-credential{
+   color: red;
+   font: 16px;
+}
+
+.sing-create{
+   color: lightblue;
+   font: 12px;
+   text-decoration: underline;
+}
+
 .signin-title{
     font-size: x-large;
     color: dodgerblue;
@@ -21,7 +32,7 @@
     margin-bottom: 10px;
     border: 1px solid black ;
     border-radius: 10px;
-    padding: 5px 0px;
+    padding: 5px 10px;
 }
 
 .sign-form>button{

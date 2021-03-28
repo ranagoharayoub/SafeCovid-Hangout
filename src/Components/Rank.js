@@ -1,16 +1,20 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './Rank.css'
-import {useStateValue} from '../Context/AuthContext'
+// import {useStateValue} from '../Context/AuthContext'
+
+import {ConfidentialContext} from '../Context/Context';
 
 function Rank() {
-    const [{rank}, dispatch] = useStateValue()
+    
+    const {value, setValue} = useContext(ConfidentialContext);
+    // const [{rank}, dispatch] = useStateValue()
     return (
         <div className='rank-cont'>
             <div className='rank-title'>
                 <p>Rank Assigned</p>
             </div>
             <div className='rank-risk'>
-                <p>Your Risk Rank <b>{`"${rank}"`}</b></p>
+                <p>Your Risk Rank <b>{`"${value.rank}"`}</b></p>
                 <p>Acceptable Activities Below (all applicable categories listed)</p>
             </div>
             <div className='activity-cont'>

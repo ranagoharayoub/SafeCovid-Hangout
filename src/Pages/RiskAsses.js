@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Rank from '../Components/Rank'
 import RiskQuest from '../Components/RiskQuest'
 import SignUp from '../Components/SignUp'
@@ -6,7 +6,7 @@ import './RiskAsses.css'
 import { Link } from 'react-router-dom'
 
 function RiskAsses() {
-
+    const [userCred, serUserCred] = useState(null);
     
     return (
         <div className='risk-cont'>
@@ -17,10 +17,10 @@ function RiskAsses() {
             </div>
             <div className='risk-lower'>
                 <div className='risk-left-cont'>
-                    <SignUp></SignUp>
+                    <SignUp credential={(cred)=>serUserCred(cred)}></SignUp>
                 </div>
                 <div className= 'risk-center-cont'>
-                    <RiskQuest></RiskQuest>
+                    <RiskQuest credential={userCred}  forSignup={true}></RiskQuest>
                 </div>
                 <div className= 'risk-right-cont'>
                     <Rank></Rank>
