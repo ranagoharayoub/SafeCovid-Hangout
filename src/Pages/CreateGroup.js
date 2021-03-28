@@ -3,6 +3,7 @@ import './JoinGroup.css';
 import {ConfidentialContext} from '../Context/Context';
 import ApiClient from '../CommonMethods/APIHandle';
 import { Link } from 'react-router-dom';
+import './CreateGroup.css'
 
 function CreateGroup() {
     const {value, setValue} = useContext(ConfidentialContext);
@@ -34,21 +35,22 @@ function CreateGroup() {
             <div className='join-upper' style={{display: 'flex', justifyContent:'center'}}>
                     <p className='join-title' style={{textAlign:'center'}} >All Created Groups</p>                
             </div>
-            <div className='grid' style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
+            <div className='grid' style={{display: 'grid', gridTemplateColumns: '1fr 1fr', marginTop: '20px'}}>
                 {groups ? groups.map((user)=>(
-                    <div className='join-right-cont' >
-                    <div className='group'>
-                        <div className='group-pic' >
-                            <img src='/Event.png' alt='img'></img>
+                    <div className='all-group-cont' >
+                        <div className='all-group'>
+                            <div className='all-group-pic' >
+                                <img src='/Event.png' alt='img'></img>
+                            </div>
+                            <div className='join-org-btn'>
+                                <Link className='link-organizer' to='/organize'>
+                                    <button className='organizer-login'>Organizer Login</button>
+                                </Link>
+                            </div>
                         </div>
-                        <div className='join-org-btn'>
-                            <button className='join-btn'>Join</button>
-                            <button className='org-login'>Organizer Login</button>
+                        <div className='event'>
+                            <p>Group 1</p>
                         </div>
-                    </div>
-                    <div className='event'>
-                        <p>Group 1</p>
-                    </div>
                      </div>
                 ))
                 :

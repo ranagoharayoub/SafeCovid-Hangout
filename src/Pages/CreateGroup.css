@@ -1,0 +1,38 @@
+.all-group-cont{
+    height: 30vh;
+    width: 80%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.all-group{
+    display: flex;
+}
+
+/* .link-organizer{
+    color:white;
+    background:dodgerblue;
+    border-radius: 10px;
+    border: none;
+    padding: '20px 0px';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+} */
+
+.organizer-login{
+    color:white;
+    background:lightskyblue;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 5px
+}
+
+.organizer-login:hover{
+    background:dodgerblue;
+    cursor: pointer;
+}
