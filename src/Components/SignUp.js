@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import './SignUp.css'
 
 function SignUp(props) {
@@ -12,7 +12,7 @@ function SignUp(props) {
 	const [emailError, setEmailError] = useState(false);
 	const [usernameError, setUsernameError] = useState(false);
 	const [passwordError, setPasswordError] = useState(false);
-	let  history = useHistory();
+	// let  history = useHistory();
 
 	const checkSignUp = (e) => {
 		e.preventDefault();		

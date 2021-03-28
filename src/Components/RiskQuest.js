@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import './RiskQuest.css';
-import {useStateValue} from '../Context/AuthContext';
 import ApiClient from '../CommonMethods/APIHandle';
-import {User_Rank} from '../Context/Reducer';
+// import {User_Rank} from '../Context/Reducer';
 import {ConfidentialContext} from '../Context/Context';
 import { useHistory } from "react-router-dom";
 function RiskQuest(props) {
@@ -12,7 +11,6 @@ function RiskQuest(props) {
     const [homeDinner, sethomeDinner] = useState('Yes')
     const [movie, setmovie] = useState('Yes')
     const [rank, setrank] = useState('Not Assigned')
-    // const [{}, dispatch] = useStateValue()
     const {value, setValue} = useContext(ConfidentialContext);
     let  history = useHistory()
    
@@ -71,17 +69,11 @@ function RiskQuest(props) {
             e.preventDefault()
     }
 
-    // useEffect(() => {
-    //     dispatch({
-    //         type: User_Rank,
-    //         payload: rank,
-    //     })
-    // }, [rank])
 
     useEffect(() => {
         setValue({...value, rank: rank})
         console.log('USER VALUE', value)
-    }, [rank])
+    }, [value,rank,setValue])
 
     useEffect(() => {
         if (hiking==='Yes'&& diningOutdoor==='Yes'&& homeDinner==='Yes'&& movie==='Yes') {

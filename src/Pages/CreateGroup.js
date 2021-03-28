@@ -2,12 +2,12 @@ import React,{useEffect, useContext, useState} from 'react';
 import './JoinGroup.css';
 import {ConfidentialContext} from '../Context/Context';
 import ApiClient from '../CommonMethods/APIHandle';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function CreateGroup() {
     const {value, setValue} = useContext(ConfidentialContext);
     const [groups, setGroups] = useState(null);
-
+    console.log(setValue)
     console.log(value, '..value')
 
     useEffect(()=>{
@@ -23,7 +23,7 @@ function CreateGroup() {
                 console.log(res)
             }	
         })  
-    },[])
+    },[value])
 
     useEffect(()=> {
         console.log(groups, 'groups')
